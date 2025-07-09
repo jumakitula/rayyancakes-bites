@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rayyan Cakes & Bites</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <!-- Slick Slider -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <style>
+    .chocolate_container {
+      margin-top: 40px;
+    }
+    .chocolate_slider .box {
+      padding: 15px;
+      text-align: center;
+    }
+    .order-form-popup {
+      position: absolute;
+      background-color: white;
+      border: 1px solid #ddd;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      z-index: 9999;
+      display: none;
+      width: 300px;
+    }
+    .order-form-popup .close-btn {
+      float: right;
+      cursor: pointer;
+      font-size: 18px;
+      color: red;
+    }
+    .slick-prev:before, .slick-next:before {
+      color: #333;
+    }
+  </style>
+</head>
+<body class="sub_page">
+
+  <!-- Header -->
+  <header class="header_section">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/rayyancakes_logo.png" alt="Rayyan Cakes & Bites" style="height: 80px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class=""></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item active"><a class="nav-link" href="chocolate.html">Our Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="testimonial.html">Testimonial</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Menu Section -->
+  <section class="chocolate_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>Our MENU</h2>
+        <p>Delicious handmade bites straight from Zanzibar</p>
+      </div>
+
+      <div class="chocolate_slider chocolate_container">
+        <div class="box">
+          <div class="img-box"><img src="images/moonpie.JPG" alt=""></div>
+          <div class="detail-box">
+            <h6>Moon<span>Pie</span></h6>
+            <a href="#" onclick="openOrderForm(event, 'Moon Pie')">BUY NOW</a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box"><img src="images/cookies.JPG" alt=""></div>
+          <div class="detail-box">
+            <h6>Sweet<span>Cookies</span></h6>
+            <a href="#" onclick="openOrderForm(event, 'sweet cookies')">BUY NOW</a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box"><img src="images/vikokoto.jpg" alt=""></div>
+          <div class="detail-box">
+            <h6>tasty <span>vikokotoo</span></h6>
+            <a href="#" onclick="openOrderForm(event, 'vikokoto')">BUY NOW</a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box"><img src="images/vitumbua.JPG" alt=""></div>
+          <div class="detail-box">
+            <h6>yummy<span>vitumbua</span></h6>
+            <a href="#" onclick="openOrderForm(event, 'vitumbua')">BUY NOW</a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box"><img src="images/mkate wa mchele.JPG" alt=""></div>
+          <div class="detail-box">
+            <h6>mkate wa <span>mchele</span></h6>
+            <a href="#" onclick="openOrderForm(event, 'mkate wa mchele')">BUY NOW</a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box"><img src="images/sambusa.JPG" alt=""></div>
+          <div class="detail-box">
+            <h6>nice <span>sambusa</span></h6>
+            <a href="#" onclick="openOrderForm(event, 'sambusa')">BUY NOW</a>
+          </div>
+        </div>
+
+
+         <div class="box">
+          <div class="img-box"><img src="images/bentocake.jpg" alt=""></div>
+          <div class="detail-box">
+            <h6>bento <span>cake</span></h6>
+            <a href="#" onclick="openOrderForm(event, 'bentocake')">BUY NOW</a>
+          </div>
+        </div>
+         <div class="box">
+          <div class="img-box"><img src="images/cheesballs.JPG" alt=""></div>
+          <div class="detail-box">
+            <h6>cheese<span>ball</span></h6>
+            <a href="#" onclick="openOrderForm(event, 'cheeseball')">BUY NOW</a>
+          </div>
+        </div>
+         <div class="box">
+          <div class="img-box"><img src="images/Cupcakes.jpg" alt=""></div>
+          <div class="detail-box">
+            <h6>Cup<span>cake</span></h6>
+            <a href="#" onclick="openOrderForm(event, 'cupcake')">BUY NOW</a>
+          </div>
+        </div>
+         <div class="box">
+          <div class="img-box"><img src="images/fluffydonuts.jpg" alt=""></div>
+          <div class="detail-box">
+            <h6>fluffy<span>donuts</span></h6>
+            <a href="#" onclick="openOrderForm(event, 'fluffydonuts')">BUY NOW</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Form Popup -->
+  <div id="orderFormPopup" class="order-form-popup">
+    <span class="close-btn" onclick="closeOrderForm()">✖</span>
+    <h5>Order Form</h5>
+    <form onsubmit="sendOrderToWhatsApp(); return false;">
+      <input type="hidden" id="productName">
+      <div class="form-group">
+        <label for="userName">Full Name</label>
+        <input type="text" class="form-control" id="userName" required>
+      </div>
+      <div class="form-group">
+        <label for="userPhone">Phone Number</label>
+        <input type="text" class="form-control" id="userPhone" required>
+      </div>
+      <div class="form-group">
+        <label for="userQty">Quantity</label>
+        <input type="number" class="form-control" id="userQty" required>
+      </div>
+      <button type="submit" class="btn btn-success btn-block">Send via WhatsApp</button>
+    </form>
+  </div>
+<section class="info_section layout_padding2">
+  <div class="container">
+    <div class="row info_form_social_row">
+      <div class="col-md-8 col-lg-9">
+        <div class="info_form">
+          <form action="">
+            <input type="email" placeholder="Enter your email">
+            <button>
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <div class="social_box">
+          <a href="#">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+          <a href="#" target="_blank" aria-label="Instagram">
+            <svg
+              width="18"
+              height="18"
+              fill="currentColor"
+              class="bi bi-instagram"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+              style="vertical-align: middle;"
+            >
+              <path d="M8 0C5.747 0 5.332.01 4.487.048 3.64.086 3.064.217 2.575.41A4.007 4.007 0 0 0 .41 2.574c-.193.49-.324 1.066-.362 1.913C.01 5.332 0 5.747 0 8s.01 2.668.048 3.513c.038.847.169 1.423.362 1.912a4.007 4.007 0 0 0 2.165 2.165c.49.193 1.066.324 1.913.362.845.038 1.26.048 3.513.048s2.668-.01 3.513-.048c.847-.038 1.423-.169 1.913-.362a4.007 4.007 0 0 0 2.165-2.165c.193-.49.324-1.066.362-1.913.038-.845.048-1.26.048-3.513s-.01-2.668-.048-3.513c-.038-.847-.169-1.423-.362-1.913A4.007 4.007 0 0 0 13.426.41c-.49-.193-1.066-.324-1.913-.362C10.668.01 10.253 0 8 0zm0 1.44c2.204 0 2.472.008 3.339.048.807.038 1.244.175 1.532.29.387.15.663.33.954.62.291.29.471.566.621.954.115.288.252.725.29 1.532.04.867.048 1.135.048 3.339s-.008 2.472-.048 3.339c-.038.807-.175 1.244-.29 1.532a2.557 2.557 0 0 1-.621.954 2.557 2.557 0 0 1-.954.621c-.288.115-.725.252-1.532.29-.867.04-1.135.048-3.339.048s-2.472-.008-3.339-.048c-.807-.038-1.244-.175-1.532-.29a2.557 2.557 0 0 1-.954-.621 2.557 2.557 0 0 1-.621-.954c-.115-.288-.252-.725-.29-1.532-.04-.867-.048-1.135-.048-3.339s.008-2.472.048-3.339c.038-.807.175-1.244.29-1.532.15-.387.33-.663.621-.954.29-.291.566-.471.954-.621.288-.115.725-.252 1.532-.29.867-.04 1.135-.048 3.339-.048zm0 2.497a4.063 4.063 0 1 0 0 8.126 4.063 4.063 0 0 0 0-8.126zm0 6.707a2.644 2.644 0 1 1 0-5.289 2.644 2.644 0 0 1 0 5.289zm4.406-6.863a.96.96 0 1 1-1.92 0 .96.96 0 0 1 1.92 0z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row info_main_row">
+      <div class="col-md-6 col-lg-3">
+        <div class="info_links">
+          <h4>Menu</h4>
+          <div class="info_links_menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="chocolate.html">Our Menu</a>
+            <a href="testimonial.html">Testimonial</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Removed Instagram box here -->
+
+      <div class="col-md-6 col-lg-3">
+        <div class="info_detail">
+          <h4>Company</h4>
+          <p class="mb-0">
+            Bringing delicious, fresh bites from Zanzibar to your table. Sweetness, tradition, and elegance baked in every piece.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <h4>Contact Us</h4>
+        <div class="info_contact">
+          <a href="#">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <span>Stone Town, Zanzibar</span>
+          </a>
+          <a href="tel:+255123456789">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <span>+255 652 727 067</span>
+          </a>
+          <a href="mailto:info@rayyancakesbites.com">
+            <i class="fa fa-envelope"></i>
+            <span>info@rayyancakesbites.com</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Footer -->
+  <footer class="container-fluid footer_section">
+    <div class="container text-center">
+      <p>&copy; <span id="displayYear"></span> Rayyan Cakes & Bites | Crafted with ❤️</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script>
+    $('.chocolate_slider').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      arrows: true,
+      responsive: [
+        { breakpoint: 768, settings: { slidesToShow: 2 } },
+        { breakpoint: 480, settings: { slidesToShow: 1 } }
+      ]
+    });
+
+    function openOrderForm(e, product) {
+      e.preventDefault();
+      const popup = document.getElementById('orderFormPopup');
+      const buttonRect = e.target.getBoundingClientRect();
+      popup.style.top = window.scrollY + buttonRect.bottom + 10 + 'px';
+      popup.style.left = buttonRect.left + 'px';
+      popup.style.display = 'block';
+      document.getElementById('productName').value = product;
+    }
+
+    function closeOrderForm() {
+      document.getElementById('orderFormPopup').style.display = 'none';
+    }
+
+    function sendOrderToWhatsApp() {
+      const product = document.getElementById('productName').value;
+      const name = document.getElementById('userName').value;
+      const phone = document.getElementById('userPhone').value;
+      const qty = document.getElementById('userQty').value;
+
+      const message = `Hello! I would like to order:\n🍰 *${product}*\n👤 Name: ${name}\n📞 Phone: ${phone}\n🔢 Quantity: ${qty}`;
+      const whatsappNumber = '255652727067';
+      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+      closeOrderForm();
+    }
+
+    document.getElementById("displayYear").innerText = new Date().getFullYear();
+  </script>
+</body>
+</html>
